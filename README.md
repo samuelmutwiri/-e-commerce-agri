@@ -8,11 +8,6 @@
 -linux and Mac/OSX
 > python3 --version
 if not installed, find it at [Link Python 3.8.7](https://www.python.org/downloads/release/python-387/)
-2. Install pipenv
--windows
-> pip install pipenv
--linux and Mac/OSX
-> pip3 install pipenv
 3. Activate pipenv and install django
 all platforms
 > pipenv install django
@@ -23,23 +18,11 @@ all platforms
 >python manage.py runserver
 -linux and Mac/OSX
 >python3 manage.py runserver
-
+2. Install pipenv
+-windows
 ```html
-<div id="code-box">
-  <pre><code class="install pipenv">
-   pip install venv
-  </code></pre>
-  <button onclick="copyCode()">Copy</button>
-</div>
-<script>
-  function copyCode() {
-    const codeElement = document.querySelector("#code-box code");
-    const range = document.createRange();
-    range.selectNode(codeElement);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();
-    alert("Command copied to clipboard");
-  }
-</script>
+    pip install venv
+```markdown
+-linux and Mac/OSX
+'''html
+    pip3 install pipenv
