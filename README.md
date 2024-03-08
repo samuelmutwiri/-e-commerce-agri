@@ -2,7 +2,7 @@
  An app to manage agricultural logistics
 
 # Creating venv, installing django, and starting the project!!!
-1. First things first-Make sure Python 3.8.7 or above is installed
+1. First things first-Make sure Python 3.8.7 or above is installed.  
 Windows
 ```html
     python --version
