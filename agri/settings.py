@@ -54,7 +54,7 @@ ROOT_URLCONF = 'agri.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["agri/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
