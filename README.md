@@ -1,7 +1,7 @@
 # -e-commerce-agri
  An app to manage agricultural logistics
 
-# Creating venv, installing django, and starting the project!!!
+# Creating venv, installing django, and starting the project...  
 1. First things first-Make sure Python 3.8.7 or above is installed.  
 Windows
 ```html
@@ -13,7 +13,7 @@ linux and Mac/OSX
 ```
 If not installed, find it at [Python 3.8.7](https://www.python.org/downloads/release/python-387/)
 
-2. Install pipenv
+2. Install pipenv  
 windows
 ```html
     pip install venv
@@ -22,13 +22,13 @@ linux and Mac/OSX
 ```html
     pip3 install pipenv
 ```
-3. Activate pipenv and install django
+3. Activate pipenv and install django  
 all platforms
 ```html
     pipenv install django
     pipenv shell
 ```
-4. create project (agri) (all platforms)
+4. create project (agri)  all platforms
 ```html
     django-admin startproject agri .
 ```
