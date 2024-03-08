@@ -3,11 +3,15 @@
 
 # Creating venv, installing django, and starting the project!!!
 1. First things first-Make sure Python 3.8.7 or above is installed
--Windows
-> python --version
--linux and Mac/OSX
-> python3 --version
-if not installed, find it at [Link Python 3.8.7](https://www.python.org/downloads/release/python-387/)
+Windows
+```html
+    python --version
+```
+linux and Mac/OSX
+```html
+    python3 --version
+    ```
+if not installed, find it at [Python 3.8.7](https://www.python.org/downloads/release/python-387/)
 
 2. Install pipenv
 windows
