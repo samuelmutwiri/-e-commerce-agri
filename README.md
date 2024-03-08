@@ -23,3 +23,23 @@ all platforms
 >python manage.py runserver
 -linux and Mac/OSX
 >python3 manage.py runserver
+
+```html
+<div id="code-box">
+  <pre><code class="install pipenv">
+   pip install venv
+  </code></pre>
+  <button onclick="copyCode()">Copy</button>
+</div>
+<script>
+  function copyCode() {
+    const codeElement = document.querySelector("#code-box code");
+    const range = document.createRange();
+    range.selectNode(codeElement);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+    alert("Command copied to clipboard");
+  }
+</script>
