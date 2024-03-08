@@ -10,8 +10,8 @@ Windows
 linux and Mac/OSX
 ```html
     python3 --version
-    ```
-if not installed, find it at [Python 3.8.7](https://www.python.org/downloads/release/python-387/)
+```
+If not installed, find it at [Python 3.8.7](https://www.python.org/downloads/release/python-387/)
 
 2. Install pipenv
 windows
