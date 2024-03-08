@@ -13,35 +13,36 @@ if not installed, find it at [Link Python 3.8.7](https://www.python.org/download
 -windows
 ```html
     pip install venv
-'''
+```
 ```markdown
 -linux and Mac/OSX
-'''
-'''html
+```
+```html
     pip3 install pipenv
-'''
-'''markdown
+```
+```markdown
 3. Activate pipenv and install django
 all platforms
-'''html
+```
+```html
     pipenv install django
     pipenv shell
-'''
-'''markdown
+```
+```markdown
     4. create project (agri) (all platforms)
-'''
-'''html
+```
+```html
     django-admin startproject agri .
-'''
-'''markdown
+```
+```markdown
     Windows
-'''
-'''html
+```
+```html
     python manage.py runserver
-'''
-'''markdown
+```
+```markdown
     linux and Mac/OSX
-'''
-'''html
+```
+```html
     python3 manage.py runserver
-'''
+```
