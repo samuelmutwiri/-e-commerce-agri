@@ -28,11 +28,11 @@ all platforms
 ```html
     django-admin startproject agri .
 ```
-    Windows
+Windows
 ```html
     python manage.py runserver
 ```
-    linux and Mac/OSX
+linux and Mac/OSX
 ```html
     python3 manage.py runserver
 ```
