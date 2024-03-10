@@ -8,24 +8,79 @@
     <style>
         /* All CSS styles here */
         body {
-            background-color: #f8f9fa;
+            background: linear-gradient(120deg, hwb(218 0% 93%), #04112c);
+            box-sizing: border-box;
+            background-repeat: no-repeat;
         }
         .container {
             max-width: 600px;
             margin: 50px auto;
             padding: 40px;
             border-radius: 10px;
-            background-color: #fff;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            background-color: #886607;
+            box-shadow: 0px 0px 25px 20px rgba(151, 245, 174, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #063106;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            font-size: xx-large;
+        }
+        #getout {
+            background-color: rgb(120, 235, 54);
+            color: #1a0303;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: medium;
+            border-radius: 10px;
+            padding: 40px, yellow;
+            box-shadow: 0px 0px 25px 20px yellowgreen;
+            margin-left: 120lvh;
+        }
+        p {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: x-large;
+            color: #04112c;
         }
     </style>
 </head>
+<header>
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <button id="getout" type="submit">Logout</button>
+</form>
+</header>
 <body>
-    <div class="container">
-        <h2>Welcome, {{ username }}</h2>
-        <p>You have been active for: {{ duration }}</p>
-        <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper convallis urna nec tincidunt.</p>
-        <!-- Add more content as needed -->
-    </div>
+    <div class="container" id="dynamic-content">
+        {% if user.is_authenticated %}
+            <h2>Welcome {{ user.username }}</h2>
+            <p>You have been active for: <span id="duration_logged_in">{{ duration_logged_in }}</span> Minutes</p>
+        {% else %}
+            <h2>Welcome, Guest</h2>
+            <!-- Handle guest user case -->
+        {% endif %}
+        <p>This is Your dashboard</p>
+        <!-- Add more html content as needed -->
+    </div>    
+
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Function to reload dynamic content every minute
+            function reloadDynamicContent() {
+                $.ajax({
+                    url: "{% url 'dynamic_content_view' %}",
+                    success: function(data) {
+                        // Update dynamic content
+                        $('#dynamic-content').html(data);
+                    }
+                });
+            }
+
+            // Reload dynamic content every minute
+            setInterval(reloadDynamicContent, 60000); // 60000 milliseconds = 1 minute
+        });
+    </script>
 </body>
 </html>
